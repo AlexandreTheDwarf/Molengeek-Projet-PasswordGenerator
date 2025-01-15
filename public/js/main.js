@@ -73,14 +73,17 @@ GeneratePassword.addEventListener("click", () => {
 // Copy :
 
 function copyClipboard() {
-    navigator.clipboard.writeText(pswGenerate.innerText)
-        .then(() => {
-            alert("Copied the text: " + pswGenerate.innerText);
-        })
-        .catch(err => {
-            console.error("Failed to copy text: ", err);
-            alert("Failed to copy text");
-        });
+    navigator.clipboard.writeText(pswGenerate.innerText);
+
+    const tooltiptext = document.getElementById("myTooltip"); // Sélectionne l'élément via son id
+    tooltiptext.style.visibility = "visible";
+    tooltiptext.style.opacity = "1";
+
+    // Cache la bulle d’info après 2 secondes
+    setTimeout(() => {
+        tooltiptext.style.visibility = "hidden";
+        tooltiptext.style.opacity = "0";
+    }, 2000);
 }
 
 pswCopy.addEventListener("click", copyClipboard);

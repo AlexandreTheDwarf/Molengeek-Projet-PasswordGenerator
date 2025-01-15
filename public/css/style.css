@@ -51,8 +51,8 @@ h3{
 
 #pswGenerate{
     width: 100%;
-    height: 80%;
-    background-color: red;
+    height: 100%;
+    background-color: #14142F;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,6 +61,7 @@ h3{
 #pswCopy{
     height: 75%;
     border: none;
+    background-color: #32338E ;
 }
 
 .containerBot{
@@ -81,6 +82,11 @@ h3{
 }
 
 
+input[type="checkbox"] {
+    accent-color: #61A054;
+  }
+  
+
 #GeneratePassword{
     width: 100%;
     background-color: #32338E;
@@ -95,7 +101,7 @@ h3{
     display: inline-block;
   }
   
-  .tooltip .tooltiptext {
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 140px;
     background-color: #555;
@@ -110,9 +116,9 @@ h3{
     margin-left: -75px;
     opacity: 0;
     transition: opacity 0.3s;
-  }
+}
   
-  .tooltip .tooltiptext::after {
+.tooltip .tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -121,9 +127,5 @@ h3{
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
-  }
+}
   
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
